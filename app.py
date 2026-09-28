@@ -8,13 +8,16 @@ import os
 from PIL import Image
 from docx import Document
 from groq import Groq
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # ============================================================
 # GROQ API SETUP
 # ============================================================
 
 client = Groq(
-    api_key="GROQ_API_KEY"
+    api_key=os.getenv("GROQ_API_KEY")
 )
 
 # ============================================================
